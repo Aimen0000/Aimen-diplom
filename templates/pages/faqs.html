@@ -1,0 +1,103 @@
+{% extends 'partials/base.html' %} {% load static %} {% load humanize %} {% block content %}
+<div class="gray py-3">
+    <div class="container">
+        <div class="row">
+            <div class="colxl-12 col-lg-12 col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="#">Информация</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Частые вопросы</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="middle">
+    <div class="container">
+    
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="sec_title position-relative text-center">
+                    <h3 class="ft-bold pt-3"> Часто Задаваемые Вопросы </h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-12 ">
+                
+                <div class="d-block position-relative border rounded py-3 px-3 mb-4">
+                    <h4 class="ft-medium">Заказы:</h4>
+                    <div id="accordion" class="accordion">
+                        <div class="card">
+                            <div class="card-header" id="h1">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#ord1" aria-expanded="true" aria-controls="ord1">
+                                    Есть ли несколько способов оплаты?
+                                </button>
+                                </h5>
+                            </div>
+
+                            <div id="ord1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
+                                <div class="card-body">
+                                    Сейчас доступна оплата только банковской картой, но скоро добавим новые способы!                             
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="h2">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord2" aria-expanded="false" aria-controls="ord2">
+                                    Могу ли я отследить свой заказ?
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="ord2" class="collapse" aria-labelledby="h2" data-parent="#accordion">
+                                <div class="card-body">
+                                    Да, отслеживание заказов доступно.
+                                    Проверить статус можно:
+                                    В личном кабинете → [Отследить заказ]                             
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="h3">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord3" aria-expanded="false" aria-controls="ord3">
+                                    Можно ли использовать купоны и скидки?
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="ord3" class="collapse" aria-labelledby="h3" data-parent="#accordion">
+                                <div class="card-body">
+                                    Да, конечно! Вы можете:
+                                    Ввести промокод в корзине («Применить купон»)                            
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="h5">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord5" aria-expanded="false" aria-controls="ord5">
+                                    У вас безопасное оформление заказа?
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="ord5" class="collapse" aria-labelledby="h5" data-parent="#accordion">
+                                <div class="card-body">
+                                    Да, оплата полностью безопасна!
+                                    Ваши платежные данные не хранятся на нашем сервере.                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
